@@ -685,7 +685,7 @@ body a{
 .portfolio{
     background: var(--second-bg-color);
     padding: 60px  20px;
-    border: 2px solid;
+    /* border: 2px solid; */
 }
 
 .portfolio h2{
