@@ -211,6 +211,7 @@ body a{
         transform: translateX(0);
         opacity: 1;
     }
+ 
 }
 
 @keyframes fadeInUp {
@@ -285,6 +286,10 @@ body a{
     /* padding: 70px  20px; */
     padding: 10rem 9% 7rem;
 }
+.about:hover{
+    animation: fadeIn 1.2s ease forwards;
+    animation-delay: 0.2s;
+}
 .about-img img{
     width: 35vw;
     border-radius: 50% 20% / 10% 40%;
@@ -297,8 +302,19 @@ body a{
     justify-content: center;
     gap: 10px;
     flex-direction: column;
+    /* animation: fadeIn 1.2s ease forwards;
+    animation-delay: 2s; */
 }
-
+@keyframes fadeIn {
+    0% {
+        transform: translateY(70px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(-70px);
+        opacity: 1;
+    }
+}
 .about-content h2{
     text-align: left;
     line-height: 1.2;
@@ -322,6 +338,11 @@ body a{
 #services{
     /* border: 1px solid green; */
     padding: 70px  20px;
+    
+}
+#services:hover{
+    animation: zoomIn 1.5s ease forwards;
+    animation-delay: 0.1s;
 }
 #services h1{
     text-align: center;
@@ -353,6 +374,12 @@ body a{
     /* backdrop-filter: blur(30px); */
     /* background: white; */
     border: 1px solid rgba(255, 255, 255, 0.5);
+    /* border: 2px solid; */
+    transition: .2s ease;
+  }
+  .card-list .card-item:hover{
+    background-color: rgb(77, 74, 72);
+    /* color: black; */
   }
   .card-list .card-item i{
     color:bisque;
@@ -472,19 +499,22 @@ body a{
     font-size: 4.5rem;
     font-family: "Montagu Slab", serif;
     padding: 20px 10px 40px 10px;
+    /* color:red; */
 }
 .skills .main-text h2 span{
     color: var(--main-color);
 }
+.skill-main:hover{
+    animation: slideInLeft 1s ease forwards;
+    animation-delay: 0.2s;
+}
 .skill-main
 {
+    /* border: 2px solid; */
 	width: 100%;
 	display: grid;
 	grid-template-columns: repeat(2,1fr);
-	/* grid-row-gap: 30px; */
-	/* grid-column-gap: 50px; */
-    /* border: 2px solid white; */
-    padding: 20px 60px 60px;
+	padding: 20px 60px 60px;
 }
 .skill-bar
 {
@@ -496,8 +526,11 @@ body a{
 	margin-bottom: 4rem;
 	font-size: 3rem;
 	text-align: center;
+    /* border: 1px solid; */
 }
-
+.skill-left {
+    /* border: 1px solid red; */
+}
 .skill-left .skill-bar .info
 {
 	display: flex;
@@ -608,6 +641,7 @@ body a{
 
 .points.marked
 {
+    /* border: 2px solid red; */
 	animation: glow 0.04s linear forwards;
 	 animation-delay: calc(var(--i)*0.05s);
 }
@@ -651,6 +685,7 @@ body a{
 .portfolio{
     background: var(--second-bg-color);
     padding: 60px  20px;
+    border: 2px solid;
 }
 
 .portfolio h2{
@@ -730,7 +765,31 @@ body a{
     color: var(--second-bg-color);
     text-align: center;
 }
-
+.portfolio:hover .portfolio-box {
+    animation: fadeInUp 0.6s forwards;
+    transition: 0.3s ease;
+  }
+  
+  /* Add delays for each child box */
+  .portfolio:hover .portfolio-box:nth-child(1) {
+    animation-delay: 0s;
+  }
+  .portfolio:hover .portfolio-box:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .portfolio:hover .portfolio-box:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  .portfolio:hover .portfolio-box:nth-child(4) {
+    animation-delay: 0.6s;
+  }
+  .portfolio:hover .portfolio-box:nth-child(5) {
+    animation-delay: 0.8s;
+  }
+  .portfolio:hover .portfolio-box:nth-child(6) {
+    animation-delay: 1s;
+  }
+  
 
 /* Contact Page Design...... */
 .contact{
